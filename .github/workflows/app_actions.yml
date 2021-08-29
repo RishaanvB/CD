@@ -16,6 +16,4 @@ jobs:
         run: pytest
       # if test pass cps ${{github.repository}} to root@ip
       - name: Copy repo to VPS
-        with:
-          secret: ${{ secrets.OCEAN_PASS }}
-          run: copy.sh
+        echo: ${{ secrets.OCEAN_PASS }}
