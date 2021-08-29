@@ -33,4 +33,6 @@ jobs:
           PASSWORD: ${{ secrets.PASSWORD }}
           PORT: ${{ secrets.PORT }}
           KEY: ${{ secrets.SSHKEY }}
-          script: sh copy.sh
+          # run: sh ${{  github.workspace  }}/farm/copy.sh
+          run: "${{  github.workspace  }}/.github/copy.sh"
+          shell: bash
