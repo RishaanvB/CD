@@ -13,11 +13,7 @@ jobs:
       # - name: Test with pytest
       #   run: pytest
       # if test pass cps ${{github.repository}} to root@ip
-      - shell: bash
-        with: 
+      - name: vps connect
+        with:
           OCEN_PASS: ${{ secrets.OCEAN_PASS }}
-        run: scp ${{  github.workspace  }} root@${{ secrets.ROOT }}:/home/testfolder
-          
-
-
-          
+        run: echo 'hello'
