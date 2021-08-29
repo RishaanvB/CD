@@ -13,7 +13,9 @@ jobs:
       # - name: Test with pytest
       #   run: pytest
       # if test pass cps ${{github.repository}} to root@ip
-      - name: vps connect
-        env:
-          OCEN_PASS: ${{ secrets.OCEAN_PASS }}
-        run: scp ${{  github.workspace  }} root@${{ secrets.ROOT }}:/home/
+      - name: Push to server
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.ROOT }}
+          password: ${{ secrets.OCEAN_PASS }}
+          script: cd /home/ && touch connected.txt
