@@ -1,5 +1,4 @@
-echo 'hey dit is vnauit copy.sh'
-echo 'ls'
+echo 'hey dit is  copy.sh'
+echo 'accessing dir with ls'
 ls
-echo 'ls home'
-ls home
+
