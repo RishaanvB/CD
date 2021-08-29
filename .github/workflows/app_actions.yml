@@ -14,6 +14,6 @@ jobs:
       #   run: pytest
       # if test pass cps ${{github.repository}} to root@ip
       - name: vps connect
+        run: echo 'hello'
         with:
           OCEN_PASS: ${{ secrets.OCEAN_PASS }}
-        run: echo 'hello'
