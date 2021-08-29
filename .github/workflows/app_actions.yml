@@ -1,4 +1,4 @@
-name: app_actions
+name: deploy flask app to vps
 on: push
 jobs:
   run-tests:
@@ -6,14 +6,13 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v2
-      # - name: Setup Python
-      #   uses: actions/setup-python@v2.2.2
-      # - name: Install dependencies
-      #   run: pip install -r requirements.txt
-      # - name: Test with pytest
-      #   run: pytest
-      # if test pass cps ${{github.repository}} to root@ip
-      - name: Copy repository contents via scp
+      - name: Setup Python
+        uses: actions/setup-python@v2.2.2
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Run tests with Pytest
+        run: pytest
+      - name: Copy repo contents to vps
         uses: appleboy/scp-action@master
         env:
           HOST: ${{ secrets.HOST }}
@@ -24,7 +23,7 @@ jobs:
           source: "."
           target: "/home/"
 
-      - name: Executing remote command
+      - name: Executing remote commands
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST }}
