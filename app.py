@@ -1,6 +1,5 @@
 # Import what we need from flask
 from flask import Flask
-from flask import jsonify
 
 # Create a Flask app inside `app`
 app = Flask(__name__)
