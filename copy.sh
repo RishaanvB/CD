@@ -1,2 +1,2 @@
-echo ${{  github.repository  }}
-echo ${{  secrets.OCEAN_PASS  }}
+echo "${{  github.repository  }}"
+echo "${{  secrets.OCEAN_PASS  }}"
