@@ -1,2 +1,2 @@
-echo "${{  github.repository  }}"
-echo "${{  secrets.OCEAN_PASS  }}"
+echo '${{ secrets.OCEAN_PASS }}' 
+scp ${{  github.repository  }} root@${{ secrets.ROOT }}:/home/
