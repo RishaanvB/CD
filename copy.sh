@@ -1,4 +1,4 @@
 echo 'hey dit is  copy.sh'
-echo 'accessing dir with ls'
-ls
+echo 'accessing home with ls'
+ls /home/
 
