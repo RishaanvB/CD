@@ -19,7 +19,7 @@ And last, another github action that lets me input commands on the vps in order 
 So I made a lot of mistakes and had to recommit numerous times.
 This was just basically a learning phase, where I was trying some things. Not really a way to solve it other than practice makes perfect I guess.
 
--Second problem: Not knowing how to connect to vps through github workflow.
+-Second problem: Not knowing how to connect to vps through github workflow. This was definitely the biggest problem I had with this assignment.
 I hoped you could just run `root@ip:` to connect with the vps with the password as a github secret, but that didn't work out.. Since I had no idea how to connect to the vps through a github workflow.  
  So after a lot of failed attempts I decided to cheat and google it. I've found lots of different answers involving creating SSH keys on the vps, but that seemed quite some work. So I decided to go for the 'easy' route and use github actions that let me copy the repo contents and connect to the vps.
 
