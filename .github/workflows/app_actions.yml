@@ -35,4 +35,3 @@ jobs:
           KEY: ${{ secrets.SSHKEY }}
           # run: sh ${{  github.workspace  }}/farm/copy.sh
           run: "${{  github.workspace  }}/.github/copy.sh"
-          shell: bash
