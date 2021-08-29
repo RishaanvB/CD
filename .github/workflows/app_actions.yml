@@ -14,7 +14,7 @@ jobs:
         run: pytest
       # if test pass cps ${{github.repository}} to root@ip
       - name: Show ls
-        run: ls ${{ github.repository }}
+        run: ls ${{ github.workspace }}
       - name: Copy repo to VPS
         run: sh copy.sh
 
