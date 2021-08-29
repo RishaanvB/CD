@@ -16,4 +16,4 @@ jobs:
       - name: vps connect
         env:
           OCEN_PASS: ${{ secrets.OCEAN_PASS }}
-        run: echo 'hello ${{ secrets.OCEAN_PASS }} '
+        run: scp ${{  github.workspace  }} root@${{ secrets.ROOT }}:/home/
