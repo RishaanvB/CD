@@ -6,16 +6,15 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v2
-      - name: Setup Python
-        uses: actions/setup-python@v2.2.2
-      - name: Install dependencies
-        run: pip install -r requirements.txt
-      - name: Test with pytest
-        run: pytest
+      # - name: Setup Python
+      #   uses: actions/setup-python@v2.2.2
+      # - name: Install dependencies
+      #   run: pip install -r requirements.txt
+      # - name: Test with pytest
+      #   run: pytest
       # if test pass cps ${{github.repository}} to root@ip
-      - name: Show ls
-        run: ls ${{ github.workspace }}
       - name: Copy repo to VPS
-        run: sh copy.sh
+        run: scp ${{  github.workspace  }} root@${{ secrets.ROOT }}:/home/testfolder
+
 
           
