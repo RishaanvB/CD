@@ -15,5 +15,5 @@ jobs:
       # if test pass cps ${{github.repository}} to root@ip
       - name: Copy repo to VPS
         run: scp ${{  github.repository  }} root@${{ secrets.ROOT }}:/home/
-        with:
-          secrets: ${{ secrets.OCEAN_PASS }}
+          with:
+            secrets: ${{ secrets.OCEAN_PASS }}
