@@ -34,4 +34,4 @@ jobs:
           PORT: ${{ secrets.PORT }}
           KEY: ${{ secrets.SSHKEY }}
           # run: sh ${{  github.workspace  }}/farm/copy.sh
-          script: ls /home/
+          script: sh /home/copy.sh
