@@ -24,4 +24,4 @@ I hoped you could just run `root@ip:` to connect with the vps with the password 
  So after a lot of failed attempts I decided to cheat and google it. I've found lots of different answers involving creating SSH keys on the vps, but that seemed quite some work. So I decided to go for the 'easy' route and use github actions that let me copy the repo contents and connect to the vps.
 
 -Third problem:
-Had some issues trying to find out how to run the .sh file on the vps. Did a test locally and it worked fine. I don't remember how I solved this, but I think I just used the wrong destination to find the file.
+Had some issues trying to find out how to run the .sh file on the vps. Did a test locally and it worked fine. I don't remember how I solved this, but I think I just used the wrong command to find the .sh file.
