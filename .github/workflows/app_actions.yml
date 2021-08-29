@@ -17,3 +17,4 @@ jobs:
       # if test pass cps ${{github.repository}} to root@ip
       - name: Copy repo to VPS
         run: echo ${{ secrets.OCEAN_PASS }}
+        run: echo ${{ github.repository }}
