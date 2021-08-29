@@ -14,10 +14,10 @@ jobs:
       #   run: pytest
       # if test pass cps ${{github.repository}} to root@ip
       - name: Copy repo to VPS
-        run: echo 'doing something'
-        with: 
-          secret: ${{ secrets.OCEAN_PASS }}
-          run: scp ${{  github.workspace  }} root@${{ secrets.ROOT }}:/home/testfolder
+        run: scp ${{  github.workspace  }} root@${{ secrets.ROOT }}:/home/testfolder
+          with: 
+            OCEN_PASS: ${{ secrets.OCEAN_PASS }}
+          
 
 
           
