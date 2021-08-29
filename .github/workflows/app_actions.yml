@@ -24,7 +24,7 @@ jobs:
         with:
           source: "."
           target: "/home/"
-          script: ls
+
       # - name: Executing remote command
       #   uses: appleboy/ssh-action@master
       #   with:
