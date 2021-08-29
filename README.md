@@ -1,4 +1,5 @@
-![example workflow](https://github.com/RishaanvB/CD/actions/workflows/app_actions.yml/badge.svg)
+![example workflow](https://github.com/RishaanvB/CD/actions/workflows/workflow.yml/badge.svg) 
+
 
 'Name three components of your solution, explain what they are and how they relate to each other.
 A 'component' can be anthing from GitHub Actions or Bash to Digital Ocean and SSH.'
